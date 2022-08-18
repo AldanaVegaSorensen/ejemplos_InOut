@@ -8,18 +8,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class punto1_1 {
-
+    static final String nombreArchivoEntrada = "src/ejemplos_InOut/entrada.txt";
+    static final String nombreArchivoSalida = "src/TP0/sinEspacios.txt";
+    
     public static void main(String[] args) {
-       
-        String nombreArchivoEntrada = "src/ejemplos_InOut/entrada.txt";
-        String nombreArchivoSalida = "src/TP0/sinEspacios.txt";
         
         String linea = null;
 
         try {
             
             FileReader lectorArchivo = new FileReader(nombreArchivoEntrada);
-           
             FileWriter escritorArchivo = new FileWriter(nombreArchivoSalida);
 
             BufferedReader bufferLectura = new BufferedReader(lectorArchivo);
@@ -27,7 +25,7 @@ public class punto1_1 {
 
            
             while ((linea = bufferLectura.readLine()) != null) {
-                System.out.println(linea);
+                //System.out.println(linea);
                 bufferEscritura.write(linea.replaceAll("\\s",""));
             }
 

@@ -23,10 +23,12 @@ public class punto1_5 {
                 
                 
                 /*if(!generados.contains(num)){
+                    generados.add(num);
                     buff.write( num +"\n");
                 }*/
 
                 if(!verificarRepetido(generados, num)){
+                    generados[i]=num;
                     buff.write( num +"\n");
                 }
     			//System.out.println(num);

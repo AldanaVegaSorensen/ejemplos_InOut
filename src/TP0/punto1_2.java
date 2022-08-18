@@ -7,23 +7,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class punto1_2 {
+    static final String nombreArchivoEntrada = "src/ejemplos_InOut/entrada.txt";
+    static final String nombreArchivoSalida = "src/TP0/lineasImpares.txt";
+
+
     public static void main(String[] args) {
-       
-        String nombreArchivoEntrada = "src/ejemplos_InOut/entrada.txt";
-        String nombreArchivoSalida = "src/TP0/lineasImpares.txt";
         
         String linea = null;
-
+        int num = 1;
         try {
             
             FileReader lectorArchivo = new FileReader(nombreArchivoEntrada);
-           
             FileWriter escritorArchivo = new FileWriter(nombreArchivoSalida);
 
             BufferedReader bufferLectura = new BufferedReader(lectorArchivo);
             BufferedWriter bufferEscritura = new BufferedWriter(escritorArchivo);
 
-            int num = 1;
+            
             while ((linea = bufferLectura.readLine()) != null) {
                 if(num%2 !=0){
                     //System.out.println(linea);
